@@ -17,7 +17,7 @@ from sklearn.cluster import KMeans
 import pandas as pd
 
 DIR = '.\\data\\datafilev2\\datafile'
-filename = 'player_stats_new.csv'
+filename = '\\data\\player_stats_new.csv'
 types = ['touches', 'saves', 'total_pass', 'aerial_won', 'formation_place', 'accurate_pass', 'total_tackle',\
  'aerial_lost', 'fouls', 'yellow_card', 'total_scoring_att', 'man_of_the_match', 'goals', 'won_contest',\
  'blocked_scoring_att', 'goal_assist', 'good_high_claim', 'second_yellow', 'red_card', 'error_lead_to_goal',\
