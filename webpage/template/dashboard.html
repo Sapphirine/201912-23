@@ -1,0 +1,47 @@
+<html lang="en_US">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <title>Prediction and Analysis based on English Premier League  </title>
+</head>
+<link rel="stylesheet" href="{% static "css/dashboard.css" %}">
+<body>
+<h1>Prediction and Analysis based on  </h1>
+<img src={% static "pic/Premier_League_Logo.png" %} alt="logo" width="250" height="100"
+     style="position:absolute; left:720px; top:20px; "/>
+<img src={% static "pic/soccerman.png" %} alt="soccerman" width="250" height="460"
+     style="position:absolute; left:740px; top:200px; "/>
+
+<img src={% static "pic/frame.png" %} alt="frame" width="270" height="195"
+     style="position:absolute; left:490px; top:180px; "/>
+<p id="info"> EECS 6893, JH4137 JinHuang </p>
+
+<div id='dashboard'></div>
+<div id='displayhistory'></div>
+
+
+<hr class="lefthr" />
+<hr class="righthr"/>
+<hr class="middlehr"/>
+
+
+<svg class="bar-chart"></svg>
+
+<script src="{% static "js/displayhistory.js" %}"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="{% static "js/dashboard.js" %}"></script>
+
+
+
+
+<script>
+    var Data={{ data | safe}}
+    var History= {{ history | safe}}
+    dashboard('#dashboard', Data)
+</script>
+
+
+
+
+</body>
+</html>
